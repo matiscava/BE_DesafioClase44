@@ -1,20 +1,20 @@
 const productSchema = `
   type Product {
     id: ID!,
-    title: String,
-    stock: Int,
-    price: Int,
-    timestamp: String,
-    photo: String,
-    description: String,
-    code: Int 
+    title: String!,
+    stock: Int!,
+    price: Int!,
+    timestamp: String!,
+    photo: String!,
+    description: String!,
+    code: Int! 
   }
   input ProductInput {
-    title: String,
+    title: String!,
     stock: Int,
-    price: Int,
+    price: Int!,
     photo: String,
-    description: String
+    description: String!
   }
   type Query {
     getProduct(id: ID!): Product,
